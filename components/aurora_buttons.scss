@@ -1,0 +1,349 @@
+/* all the button styles goes here */
+.action-button-w-icon {
+    height: 60px;
+    background-color: $color-info-light;
+    border: 1px solid $color-button-border;
+    border-radius: 5px;
+    color: $color-font-dark;
+    text-align: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    @include transition(all 0.3s ease);
+    .action-button-icon{
+        min-width: 50px;
+    }
+    .action-button-text{
+        .h1 {
+            font-size: 15px;
+            line-height: 19px;
+        }
+    
+        .p {
+            font-size: 12px;
+            color: $color-font-gray;
+        }
+    }
+  
+    &.action-button-w-icon-success {
+        background-color: $color-success-light;
+
+        &:hover,
+        &:focus {
+        background-color: $color-success-light;
+        }
+    }
+
+    &.action-button-w-icon-warning {
+        background-color: $color-warning-light;
+
+        &:hover,
+        &:focus {
+        background-color: $color-warning-light;
+        }
+    }
+    &.action-button-w-icon-danger{
+        background-color: $color-danger-light;
+        
+        &:hover,
+        &:focus {
+        background-color: $color-danger-light;
+        }
+    }
+}
+
+.btn-w-status {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: left;
+  padding: 15px 15px 15px 35px;
+  border-radius: 0px;
+
+  .btn-status-line {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    bottom: 15px;
+    width: 5px;
+    border-radius: 5px;
+
+    &.btn-status-danger {
+      background-color: $color-danger-dark;
+    }
+
+    &.btn-status-success {
+      background-color: $color-success-dark;
+    }
+
+    &.btn-status-warning {
+      background-color: $color-warning-dark ;
+    }
+
+    &.btn-status-info {
+      background-color: $color-info-dark;
+    }
+
+    &.btn-status-brown {
+        background-color: $product-brown;
+    }
+
+    &.btn-status-purple {
+        background-color: $product-purple;
+    }
+  }
+
+  .btn-status-count {
+    float: right;
+    font-size: 12px;
+    line-height: 1.6;
+    color: $color-font-gray;
+  }
+
+  &:focus,
+  &:hover,
+  &.active {
+    background-color: #E6E6E6;
+    box-shadow: none;
+  }
+}
+
+/* Toggle buttons */
+.btn-group{
+    .btn{
+        background-color: #FFFFFF;
+        color: #7A7A7A;
+        font-size: 12px;
+        min-width: 100px;
+        &.selected{
+            background-color: $primary-color-level-2;
+            color: #FFFFFF;
+        }
+    }
+}
+
+
+/* icon buttons */
+.btn-icon-only{
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 0;
+    background: #FCFCFC;
+    color: #000000;
+    text-align: center;
+    margin-right: 5px;
+    @include box-shadow(0 1px 3px rgba(0,0,0,.2));
+    &::before{
+        content: '';
+        background-repeat: no-repeat;
+        height: 24px;
+        width: 24px;
+    }
+    &.text-bold{
+        &::before{
+            background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='24px' height='24px' viewBox='0 0 24 24' enable-background='new 0 0 24 24' xml:space='preserve'%3E%3Cimage id='image0' width='24' height='24' x='0' y='0' href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJN%0AAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN%0ARQfiDBMRCzImw0RVAAAAlUlEQVQ4y+3QMQ4BURSF4Y9YgIZuGoUorEDLDkhmDXbBUvQ6vU6j0VmA%0AKEWllDwVmRlh3mvF/6qX3JN7z8/vEQrvZm+UEgiCu0l5oPEWgCXomuMsq9/wZC0I+sWBZkSv1sfP%0AiwXomGLnmFL6VG1Qd1JmFm+J3ABj21hLQ0GwSrXUjrVEDg4ploJLecP3wNVGL+LoPxUeKPdDJFI4%0AfqUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTItMjBUMDA6MTE6NTAtMDc6MDAr97WBAAAAJXRF%0AWHRkYXRlOm1vZGlmeQAyMDE4LTEyLTIwVDAwOjExOjUwLTA3OjAwWqoNPQAAAABJRU5ErkJggg==' /%3E%3C/svg%3E");
+        }   
+    }
+    &.text-italic{
+        &::before{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath id='Path_2184' data-name='Path 2184' d='M0,0H24V24H0Z' fill='none'/%3E%3Cpath id='Path_2185' data-name='Path 2185' d='M10,4V7h2.21L8.79,15H6v3h8V15H11.79l3.42-8H18V4Z'/%3E%3C/svg%3E");
+        }
+    }
+    &.text-underline{
+        &::before{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath id='Path_2186' data-name='Path 2186' d='M0,0H24V24H0Z' fill='none'/%3E%3Cpath id='Path_2187' data-name='Path 2187' d='M12,17a6,6,0,0,0,6-6V3H15.5v8a3.5,3.5,0,0,1-7,0V3H6v8A6,6,0,0,0,12,17ZM5,19v2H19V19Z'/%3E%3C/svg%3E%0A");
+        }
+    }
+    &.text-clear-formatting{
+        &::before{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath id='Path_2188' data-name='Path 2188' d='M0,0H24V24H0Z' fill='none'/%3E%3Cpath id='Path_2189' data-name='Path 2189' d='M3.27,5,2,6.27l6.97,6.97L6.5,19h3l1.57-3.66L16.73,21,18,19.73,3.55,5.27ZM6,5v.18L8.82,8h2.4L10.5,9.68l2.1,2.1L14.21,8H20V5Z'/%3E%3C/svg%3E");
+        }
+    }
+    &.text-copy{
+        &::before{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 22'%3E%3Cpath id='content-copy' d='M19,21H8V7H19m0-2H8A2,2,0,0,0,6,7V21a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V7a2,2,0,0,0-2-2M16,1H4A2,2,0,0,0,2,3V17H4V3H16Z' transform='translate(-2 -1)'/%3E%3C/svg%3E%0A");
+        }
+    }
+    &.text-cut{
+        &::before{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath id='content-cut' d='M19,3,13,9l2,2,7-7V3M12,12.5a.5.5,0,1,1,.5-.5.5.5,0,0,1-.5.5M6,20a2,2,0,1,1,2-2,2,2,0,0,1-2,2M6,8A2,2,0,1,1,8,6,2,2,0,0,1,6,8m3.64-.36A3.9,3.9,0,0,0,10,6a4,4,0,1,0-4,4,3.9,3.9,0,0,0,1.64-.36L10,12,7.64,14.36A3.9,3.9,0,0,0,6,14a4,4,0,1,0,4,4,3.9,3.9,0,0,0-.36-1.64L12,14l7,7h3V20Z' transform='translate(-2 -2)'/%3E%3C/svg%3E");
+            height: 20px;
+            width: 20px;
+        }
+    }
+    &.text-paste{
+        &::before{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 22'%3E%3Cpath id='content-paste' d='M19,20H5V4H7V7H17V4h2M12,2a1,1,0,1,1-1,1,1,1,0,0,1,1-1m7,0H14.82A2.988,2.988,0,0,0,9.18,2H5A2,2,0,0,0,3,4V20a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V4A2,2,0,0,0,19,2Z' transform='translate(-3)'/%3E%3C/svg%3E%0A");
+            height: 22px;
+            width: 18px;
+        }
+    }
+    &.text-lock{
+        &::before{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 21'%3E%3Cpath id='lock' d='M12,17a2,2,0,1,0-2-2,2,2,0,0,0,2,2m6-9a2,2,0,0,1,2,2V20a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2V10A2,2,0,0,1,6,8H7V6A5,5,0,0,1,17,6V8h1M12,3A3,3,0,0,0,9,6V8h6V6A3,3,0,0,0,12,3Z' transform='translate(-4 -1)'/%3E%3C/svg%3E%0A");
+            height: 20px;
+            width: 16px;
+        }
+    }
+    &.text-spell-check{
+        &::before{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20.54 19.5'%3E%3Cpath id='spellcheck' d='M21.59,11.59,13.5,19.68,9.83,16,8.42,17.41,13.5,22.5,23,13M6.43,11,8.5,5.5,10.57,11m1.88,5h2.09L9.43,3H7.57L2.46,16H4.55l1.12-3h5.64Z' transform='translate(-2.46 -3)'/%3E%3C/svg%3E%0A");
+            height: 20px;
+            width: 20px;
+        }
+    }
+    &.text-print{
+        &::before{
+            background-image: url("data:image/svg+xml,%3Csvg id='baseline-print-24px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath id='Path_3403' data-name='Path 3403' d='M19,8H5a3,3,0,0,0-3,3v6H6v4H18V17h4V11A3,3,0,0,0,19,8ZM16,19H8V14h8Zm3-7a1,1,0,1,1,1-1A1,1,0,0,1,19,12ZM18,3H6V7H18Z'/%3E%3Cpath id='Path_3404' data-name='Path 3404' d='M0,0H24V24H0Z' fill='none'/%3E%3C/svg%3E");
+        }
+    }
+
+    &.text-cut {
+        &::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath id='content-cut' d='M19,3,13,9l2,2,7-7V3M12,12.5a.5.5,0,1,1,.5-.5.5.5,0,0,1-.5.5M6,20a2,2,0,1,1,2-2,2,2,0,0,1-2,2M6,8A2,2,0,1,1,8,6,2,2,0,0,1,6,8m3.64-.36A3.9,3.9,0,0,0,10,6a4,4,0,1,0-4,4,3.9,3.9,0,0,0,1.64-.36L10,12,7.64,14.36A3.9,3.9,0,0,0,6,14a4,4,0,1,0,4,4,3.9,3.9,0,0,0-.36-1.64L12,14l7,7h3V20Z' transform='translate(-2 -2)'/%3E%3C/svg%3E");
+        height: 20px;
+        width: 20px;
+        }
+    }
+
+    &.text-paste {
+        &::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 22'%3E%3Cpath id='content-paste' d='M19,20H5V4H7V7H17V4h2M12,2a1,1,0,1,1-1,1,1,1,0,0,1,1-1m7,0H14.82A2.988,2.988,0,0,0,9.18,2H5A2,2,0,0,0,3,4V20a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V4A2,2,0,0,0,19,2Z' transform='translate(-3)'/%3E%3C/svg%3E%0A");
+        height: 22px;
+        width: 18px;
+        }
+    }
+
+    &.text-lock {
+        &::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 21'%3E%3Cpath id='lock' d='M12,17a2,2,0,1,0-2-2,2,2,0,0,0,2,2m6-9a2,2,0,0,1,2,2V20a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2V10A2,2,0,0,1,6,8H7V6A5,5,0,0,1,17,6V8h1M12,3A3,3,0,0,0,9,6V8h6V6A3,3,0,0,0,12,3Z' transform='translate(-4 -1)'/%3E%3C/svg%3E%0A");
+        height: 20px;
+        width: 16px;
+        }
+    }
+
+    &.text-spell-check {
+        &::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20.54 19.5'%3E%3Cpath id='spellcheck' d='M21.59,11.59,13.5,19.68,9.83,16,8.42,17.41,13.5,22.5,23,13M6.43,11,8.5,5.5,10.57,11m1.88,5h2.09L9.43,3H7.57L2.46,16H4.55l1.12-3h5.64Z' transform='translate(-2.46 -3)'/%3E%3C/svg%3E%0A");
+        height: 20px;
+        width: 20px;
+    }
+  }
+
+  &.text-print {
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg id='baseline-print-24px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath id='Path_3403' data-name='Path 3403' d='M19,8H5a3,3,0,0,0-3,3v6H6v4H18V17h4V11A3,3,0,0,0,19,8ZM16,19H8V14h8Zm3-7a1,1,0,1,1,1-1A1,1,0,0,1,19,12ZM18,3H6V7H18Z'/%3E%3Cpath id='Path_3404' data-name='Path 3404' d='M0,0H24V24H0Z' fill='none'/%3E%3C/svg%3E");
+    }
+  }
+}
+
+/* Action buttons */
+.btn-light {
+  background-color: #E6E6E6;
+  border-color: #E6E6E6;
+  @include box-shadow(0px 0px 5px 0px rgba(0, 0, 0, 0.15));
+
+  &:hover,
+  &:focus {
+    background-color: #E3E3E3;
+    border-color: #E3E3E3;
+  }
+}
+
+/* Sidebar button set */
+
+.button-wrapper {
+    padding: 20px 15px 25px;
+    width: 100%;
+    display: inline-block;
+  
+    &.top-white-border {
+        border-top: 2px solid #FFFFFF;
+    }
+  
+    .btn-light {
+        height: 50px;
+        margin-bottom: 3%;
+        background: #E6E6E6;
+        color: #000100;
+        font-size: 15px;
+        @include box-shadow(0 1px 2px rgba(0,0,0,0.2));
+        border: none;
+        font-weight: 600;
+        width: 100%;
+        line-height: 50px;
+        padding: 0;
+        cursor: pointer;
+    
+        &.item-btn {
+            position: relative;
+            background: #FCFCFC;
+            text-align: left;
+            padding-left: 35px;
+    
+            &::before {
+            content: "";
+            width: 5px;
+            height: 20px;
+            @include border-radius(5px);
+            background: #E6E6E6;
+            position: absolute;
+            left: 10px;
+            top: 15px;
+            }
+        }
+    
+        &.warning-btn {
+            text-align: center;
+            border-left: 5px solid $aurora-red;
+            padding: 0;
+        }
+    
+        &.success-btn {
+            text-align: center;
+            border-left: 5px solid $aurora-green;
+            padding: 0;
+        }
+    
+        &.btn-edit {
+            text-align: center;
+            @include box-shadow(5px 0 0 $primary-color-level-2 inset);
+        }
+    
+        &.btn-update {
+            text-align: center;
+            @include box-shadow(5px 0 0 $aurora-green inset);
+        }
+    
+        &.btn-delete {
+            text-align: center;
+            @include box-shadow(5px 0 0 $aurora-red inset);
+        }
+    
+        &.half-btn {
+            width: 49%;
+            float: left;
+            margin-right: 2%;
+        
+            &.last-btn {
+            margin-right: 0; 
+            }
+        }
+    
+        &:hover {
+            background: #D6D6D6; 
+        }
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    
+        label {
+            cursor: pointer;
+        }
+    }
+}

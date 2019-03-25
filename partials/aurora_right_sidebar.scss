@@ -1,0 +1,205 @@
+.right-sidebar {
+    width: 300px;
+    height: calc(100vh - 50px);
+    background: #F2F2F2;
+    position: fixed;
+    right: -300px;
+    top: 50px;
+    z-index: 3;
+    @include transition(all 200ms linear);
+
+    .sidebar-title {
+        @include flexbox();
+        height: 50px;
+        background-color: #E6E6E6;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000100;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .right-sidebar-content {
+        flex-grow: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .right-sidebar-info {
+            padding: 60px;
+            text-align: center;
+
+
+            i {
+                color: #F6CF08;
+                font-size: 30px;
+            }
+
+            p {
+                margin: 0;
+                color: $color-font-gray;
+                font-size: 12px;
+            }
+        }
+
+        .sidebar-content-wrapper {
+            padding: 0 10px;
+        }
+    }
+
+    .right-sidebar-footer {
+
+        .select-view-wrapper {
+
+             i {
+                padding-right: 15px;
+                border-right: 1px solid #D6D6D6;
+                margin-right: 15px;
+                color: #D6D6D6;
+                cursor: pointer;
+
+                &.selected,
+                &:hover {
+                    color: $primary-color-level-2;
+                }
+
+                &:last-child {
+                    padding: 0;
+                    margin: 0;
+                    border-right: none;
+                }
+             }
+        }
+    }
+
+    tabset{
+        ul{
+            height: 50px;
+            align-items: center;
+            li{
+                &.nav-item{
+                    a{
+                        @include flexbox();
+                        align-items: center;
+                        justify-content: center;
+                        height: 50px;
+                        color: #000000;
+                        font-size: 12px;
+                        &.active{
+                            background-color: $primary-color-level-2;
+                            color: #FFFFFF;
+                            border:none;
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .tab-content{
+            .tab-pane{
+                .tab-inner{
+                    @include flexbox();
+                    flex-direction: column;
+                    height: calc(100vh - 100px);
+                    .tab-content{
+                        flex-grow: 1;
+                        overflow-y: auto;
+                        .tab-content-section{
+                            padding:0 10px;
+                        }
+                    }
+                    .tab-footer{
+                        &.tab-footer-with-border{
+                            border-top: 2px solid #FFFFFF;
+                            padding-top: 15px;
+                            padding-bottom: 15px;
+                        }
+                        .tab-footer-content-section{
+                            padding:0 10px;
+                        }
+                        .btn{
+                            padding: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Patient - status - right sidebar Start */
+.user-details-section {
+    .user-details-section-profile-pic {
+        .user-profile-img {
+            img {
+                border: 1px solid #95989A;
+            }
+            .user-profile-w-name {
+                width: 60px;
+                height: 60px;
+                color: #FFFFFF;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .user-details-section-profile-details {
+        margin-left: 15px;
+        h6 {
+            margin: 0px;
+        }
+        p {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.user-details-w-icon {
+    padding: 0px 10px;
+
+    .user-details-icon {
+        padding: 0px 30px 0px 10px;
+        border-right: 1px solid #D6D6D6;
+    }
+
+    .user-details-info {
+        padding-left: 30px;
+
+        label {
+        font-size: 12px;
+        margin-bottom: 0px;
+        }
+
+        p {
+        margin-bottom: 0px;
+        }
+    }
+}
+
+
+
+.right-sidebar-heading-type-1 {
+    p {
+      font-size: 12px;
+      color: #95989A;
+    }
+}
+/* Patient - status - right sidebar End */
+
+
+/* Invoice  - right sidebar start */
+.right-sidebar-heading-type-2 {
+    width: 100%;
+    padding: 10px 15px 0;
+
+    p {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 600;
+        color: #000100;
+        border-bottom: 0.5px solid #95989A;
+    }
+}
+/* Invoice  - right sidebar end */

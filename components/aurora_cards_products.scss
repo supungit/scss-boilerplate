@@ -1,0 +1,251 @@
+.aurora-card-deck {
+    padding: 30px;
+
+    @media (min-width: 576px) {
+        padding: 60px 100px;
+    }
+
+    .margin-helper {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+
+    .card {
+        width: 260px;
+        height: 340px;
+        @include box-shadow (0 2px 15px rgba(0,0,0,0.2));
+        margin: 0 25px 50px;
+        @include border-radius (10px);
+        border: none;
+        overflow: hidden;
+        @include transition (.15s ease-in-out);
+
+        &:hover {
+            @include box-shadow (0px 6px 15px 0px #7A7A7A);
+            @include transform (scale(1.03849, 1.0429));
+        }
+
+        .card-header {
+            height: 80px;
+            border: none;
+            font-size: 22px;
+            line-height: 30px;
+            font-weight: 600;
+            color: $color-font-white;
+            @include border-radius (10px 10px 0 0);
+            
+            &.color-blue {
+                background: $product-blue;
+            }
+
+            &.color-green {
+                background: $product-green;
+            }
+
+            &.color-brown {
+                background: $product-brown;
+            }
+
+            &.color-orange {
+                background: $product-orange;
+            }
+
+            &.color-purple {
+                background: $product-purple;
+            }
+
+            &.color-grey {
+                background: $product-grey;
+            }
+        }
+
+        .card-body {
+            padding: 20px;
+            
+
+            .card-content-wrapper {
+                padding-bottom: 20px;
+               
+                .large-icon {
+                
+                    &.supply-icon {
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 42.5'%3E%3Cg id='icons8_Toolbox' transform='translate(-2 -3)'%3E%3Cpath id='Path_3464' data-name='Path 3464' d='M19.5,3V5.5H7a5,5,0,0,0-5,5v5H52v-5a5,5,0,0,0-5-5H34.5V3ZM2,20.5v20a5.01,5.01,0,0,0,5,5H47a5.01,5.01,0,0,0,5-5v-20H44.5V23h-10V20.5h-15V23H9.5V20.5Z' fill='%2395989a'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    }
+
+                    &.tool-icon {
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 47.369'%3E%3Cg id='icons8_Maintenance' transform='translate(-3 -3)'%3E%3Cpath id='Path_3465' data-name='Path 3465' d='M8.263,3,3,8.263l3.7,5.551a5.252,5.252,0,0,0,4.379,2.344h1.357l7.124,7.124,3.721-3.721-7.124-7.124V11.08A5.252,5.252,0,0,0,13.814,6.7ZM42.474,3a10.491,10.491,0,0,0-9.581,14.844L6.4,44.334a2.631,2.631,0,0,0,0,3.721L7.945,49.6a2.63,2.63,0,0,0,3.721,0L27.023,34.24l15.07,15.07a3.617,3.617,0,0,0,5.109,0L49.31,47.2a3.617,3.617,0,0,0,0-5.109L34.24,27.023l3.917-3.917a10.491,10.491,0,0,0,13.9-13.9l-6.949,6.949-5.263-5.263,6.949-6.949A10.438,10.438,0,0,0,42.474,3Z' fill='%2395989a'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    } 
+
+                    &.equipment-icon {
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 56 56'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='Rectangle_2164' data-name='Rectangle 2164' width='56' height='56' fill='%2395989a' stroke='rgba(0,0,0,0)' stroke-miterlimit='10' stroke-width='1'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Group_7900' data-name='Group 7900' clip-path='url(%23clip-path)'%3E%3Cpath id='Path_3437' data-name='Path 3437' d='M10.224,2l-.73.947L2.86,11.77a1.249,1.249,0,0,0-.147.147,2.565,2.565,0,0,0-.434.583,3.1,3.1,0,0,0-.147.292l-.07.07v.075a2.339,2.339,0,0,0,0,1.386V48.667H48.729V14.1a1.707,1.707,0,0,0,0-.436v-.8l-.147-.145c-.047-.1-.093-.2-.145-.292l-.07-.075-.075-.075-.075-.145-.07-.075L41.292,2.947,40.557,2Zm2.333,4.667H24.224v4.667H9.057Zm14,0H38.224l3.5,4.667H26.557ZM6.724,16H44.057V44H6.724Zm11.667,4.667v4.667h14V20.667Z' transform='translate(2.609 2.667)' fill='%2395989a'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    }
+
+                    &.disable-icon {
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36.914 44'%3E%3Cg id='icons8_Disabled_Access' transform='translate(-4.219 -1.998)'%3E%3Cpath id='Path_3449' data-name='Path 3449' d='M16.73,2A4.4,4.4,0,1,0,21.335,6.2,4.412,4.412,0,0,0,16.73,2Zm.137,10.586a7.81,7.81,0,0,0-3.987.962C9.142,16.043,7,18.037,6.487,19.395c-.851,2.234-2.208,6.548-2.268,6.737l4.193,1.306c.017-.043,1.392-4.365,2.131-6.324a14.041,14.041,0,0,1,2.406-2.2V26.2a4.387,4.387,0,0,0,2.062,3.712l6.6,7.012L24.979,46h4.674c-.868-2.191-3.068-7.811-4.056-10.311l-5.774-8.455-.137-.687-.137-7.768,2.75,2.819c1.366,1.7,5.465,3.961,7.218,4.881l2.062-3.85a30.657,30.657,0,0,1-5.843-3.712l-3.162-3.368A7.354,7.354,0,0,0,16.867,12.589Zm15.261,12.58-1.306,2.475L39.14,46l1.993-.894Zm-19.8,6.118L5.181,46h5.156L15.7,34.861Z' transform='translate(0 0)' fill='%2395989a'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    }
+
+                    &.default-product-icon {
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 45'%3E%3Cg id='icons8_Swedish_Krona' transform='translate(-2 -2)'%3E%3Cpath id='Path_3454' data-name='Path 3454' d='M42.5,2H6.5A4.5,4.5,0,0,0,2,6.5v36A4.5,4.5,0,0,0,6.5,47h36A4.5,4.5,0,0,0,47,42.5V6.5A4.5,4.5,0,0,0,42.5,2ZM24.632,23.788l-5.177,2.593,5.177,2.584V35.75H20.879V31.285l-3.744-1.872V35.75H13.382V13.25h3.753V23.34l3.753-1.872V18.875h3.744Zm9.923.167L33.5,22.892l-3.243,1.09V35.75H26.5V18.875h3.753v1.151L34.511,18.6l2.7,2.7Z' fill='%2395989a'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    }
+                }
+
+                .main-text {
+                    width: calc(100% - 50px);
+                    padding-left: 30px;
+                    font-size: 15px;
+                    color: #001000;
+                    line-height: 20px;
+                }
+            }
+
+            .card-description {
+                border-top: 1px solid #E6E6E6;
+                padding-top: 20px;
+
+                p {
+                    font-size: 12px;
+                    color: #95989A;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin: 0;
+                }
+            }
+
+
+            .setting-btn {
+                position: absolute;
+                border-right: 50px solid #95989A;
+                border-top: 50px solid transparent;
+                bottom: 0;
+                right: 0;
+                cursor: pointer;
+    
+                .setting-icon {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg id='icons8_Services' transform='translate(0.031 -0.184)'%3E%3Cpath id='Path_3466' data-name='Path 3466' d='M13.753.184l-1.16.485.313,1.452a3.587,3.587,0,0,0-.749.773l-1.476-.341L10.2,3.716l1.258.8a3.583,3.583,0,0,0,0,1.087L10.2,6.4l.46,1.16,1.473-.313A3.737,3.737,0,0,0,12.906,8l-.362,1.476,1.16.482.823-1.28a3.812,3.812,0,0,0,1.09,0l.8,1.28,1.16-.457L17.237,8.02a3.734,3.734,0,0,0,.749-.774l1.5.338.485-1.16-1.283-.8a3.54,3.54,0,0,0,0-1.065l1.283-.823-.485-1.16-1.473.341a3.534,3.534,0,0,0-.752-.777L17.6.693,16.439.208l-.8,1.258a3.6,3.6,0,0,0-1.09,0ZM15.082,3.33A1.766,1.766,0,0,1,16.7,5.745,1.756,1.756,0,1,1,15.082,3.33ZM5.7,7.053,5.386,8.987a4.836,4.836,0,0,0-1.3.531l-1.6-1.136L1.322,9.542l1.114,1.6A4.962,4.962,0,0,0,1.9,12.47l-1.934.313v1.645l1.934.338a4.618,4.618,0,0,0,.534,1.308L1.3,17.67l1.163,1.16,1.621-1.114a4.69,4.69,0,0,0,1.3.534L5.7,20.184H7.344l.338-1.934a4.955,4.955,0,0,0,1.308-.556L10.61,18.83l1.16-1.16-1.16-1.6a4.7,4.7,0,0,0,.531-1.308l1.958-.338V12.783l-1.958-.313a4.739,4.739,0,0,0-.531-1.308l1.136-1.621-1.16-1.16-1.6,1.16a4.895,4.895,0,0,0-1.308-.556L7.344,7.053Zm.847,4.279a2.285,2.285,0,0,1,0,4.57,2.285,2.285,0,1,1,0-4.57Z' transform='translate(0 0)' fill='%23fcfcfc'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    left: 24px;
+                    bottom: 6px;
+                }
+            }
+        }
+
+        &.card-selected {
+            @include box-shadow (0px 6px 15px 0px #7A7A7A);
+            @include transform (scale(1.03849, 1.0429));
+
+            .setting-btn {
+                border-right: 50px solid $primary-color-level-2;
+            }
+        }
+    }
+}
+
+.card-container {
+
+    .expand-card-wrapper {
+        position: relative;
+        border-left: 5px solid;
+        margin-bottom: 50px;
+
+        .margin-helper {
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+
+        .card {
+            width: 260px;
+            height: 340px;
+            border-radius: 5px;
+            border: none;
+            background: #FCFCFC;
+            @include box-shadow (0 3px 10px rgba(0, 0, 0, 0.2));
+      
+            &:hover {
+                @include box-shadow (0px 6px 15px 0px #7A7A7A);
+                @include transition(0.1s ease-in-out);
+                @include transform (scale(1.03849, 1.0429));
+            }
+
+            &.card-selected {
+                border: 2px solid $primary-color-level-2 ;
+                @include box-shadow (0px 6px 15px 0px #7A7A7A);
+                @include transform (scale(1.03849, 1.0429));
+            }
+
+            .card-body {
+        
+                .card-title {
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: $color-font-dark;
+                    margin: 0;
+                    line-height: 17px;
+                    width: 100%;
+                }
+
+                .card-text {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: $color-font-dark;
+                    margin: 0;
+                    line-height: 17px;
+                    width: 100%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+        
+                .card-text-left {
+                    font-size: 12px;
+                    color: $color-font-gray;
+                    margin: 0;
+                    line-height: 17px;
+                    width: 50%;
+                    position: absolute;
+                    bottom: 0.5rem;
+                    left: 1rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+        
+                .card-text-right {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: $color-font-gray;
+                    margin: 0;
+                    line-height: 17px;
+                    width: 50%;
+                    position: absolute;
+                    bottom: 0.5rem;
+                    right: 1rem;
+                    text-align: right;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding-left: 15px;
+                }
+            }
+
+            .no-image-box {
+                width: 100%;
+                height: 260px;
+
+                i {
+                    color: #D6D6D6;
+                    font-size: 35px;
+                }
+
+                p {
+                    font-size: 10px;
+                    font-style: italic;
+                    color: #D6D6D6;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+}

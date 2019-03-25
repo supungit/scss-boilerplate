@@ -1,0 +1,222 @@
+html {
+  position: relative;
+  min-height: 100%;
+  font-size: 14px;
+}
+
+body {
+  height: 100%;
+  background: #D6D6D6;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.wrapper {
+  @include flexbox();
+
+  &.rightsidebar-open {
+    .content-wrapper {
+      @media (min-width: 1399px) {
+        width: calc(100% - 350px);
+      }
+    }
+
+    .right-sidebar {
+      right: 0px;
+    }
+  }
+}
+
+.content-wrapper {
+  height: calc(100vh - 100px);
+  width: 100%;
+  margin-top: 100px;
+  margin-left: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  @include transition(all 200ms linear);
+  @media (min-width: 576px) {
+    margin-left: 50px;
+  }
+}
+
+/* scroll bar style */
+*::-webkit-scrollbar {
+  width: 8px;
+  background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(84, 84, 84, 0.7);
+  border: none;
+}
+
+/* filter options  */
+.filter-option-selector {
+  .filter-option-selector-item {
+    font-size: 12px;
+    padding: 0px 10px;
+    border-right: 1px solid#95989A;
+    color: #95989A;
+    cursor: pointer;
+
+    &:hover,&:focus,&.active {
+      color: #0078D7;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Mobile Menu  */
+.mobile-menu-slider {
+  flex-direction: column;
+  background-color: #f2f2f2;
+  min-height: 50px;
+  justify-content: center;
+
+  .carousel {
+    &.slide {
+      .item {
+        .mobile-menu-slider-item {
+          a {
+            font-weight: 600;
+            font-size: 15px;
+            color: #000100;
+          }
+        }
+      }
+    }
+
+    .carousel-control-prev-icon {
+      width: 24px;
+      height: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    }
+
+    .carousel-control-next-icon {
+      width: 24px;
+      height: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    opacity: 1;
+  }
+}
+
+/* separator lines */
+.separator-gray {
+  height: 1px;
+  background-color: #D6D6D6;
+  width: 100%;
+}
+
+.separator-gray-light {
+  height: 2px;
+  background-color: #E6E6E6;
+  width: 100%;
+}
+
+
+/* text colors */
+.text-gray {
+  color: #7A7A7A;
+}
+.danger-text {
+  color: #F44336;
+}
+
+/* background bg */
+.blue-bg{
+  background-color: #CFE5F8;
+}
+.blue-bg-darker{
+  background-color: #AED9FE;
+}
+.yellow-bg{
+  background-color: #FFFFEF;
+}
+.yellow-bg-darker{
+  background-color: #FFF4BB;
+}
+.whitebg {
+  background-color: #FFFFFF;
+}
+
+/* borders */
+.border-tb-white {
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+/* text-ellipsis */
+.text-ellipsis{
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* aurora Grid Component - Patient Search */
+.patient-search{
+  height: calc(100vh - 100px);
+  padding: 15px 15px 0px;
+  max-height: 100%;
+  .patient-search-header{
+    min-height: 90px;
+    @media (max-width: 576px) {
+      min-height: 130px;
+    }
+  }
+  .patient-search-body{
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
+    .search-by-letters{
+      position: fixed;
+      font-size: 12px;
+      color: #B5B5B5;
+      div{
+        margin-right: 5px;
+        &:hover,&:focus{
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+    @media (max-width: 991px) {
+      margin-top: 10px;
+    }
+  }  
+}
+
+.info-message {
+
+  p {
+    font-size: 15px;
+    color: $color-font-dark;
+    font-weight: 600;
+  }
+}

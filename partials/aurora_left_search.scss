@@ -1,0 +1,74 @@
+.aurora-left-search{
+    .scroll-body{
+        overflow-y: auto;
+        flex-grow: 1;
+        height:calc(100vh - 200px);
+    }
+    accordion{
+        accordion-group{
+            .panel{
+                &.card{
+                    border: none;
+                }
+                .panel-heading{
+                    border: none;
+                    background-color:transparent;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    cursor: pointer;
+                    .panel-title{
+                        i{
+                            float: right;
+                            position: relative;
+                        }
+                    }
+                }
+                .panel-collapse{
+                    .panel-body{
+                        padding: 10px 5px;
+                        .accordion-content{
+                            h3{
+                                font-size: 15px;
+                                color: $primary-color-level-2;
+                                padding-bottom: 10px;
+                                border-bottom: 1px solid rgba(149, 152, 154, 0.2);
+                                margin-bottom: 15px;
+                            }
+                            .user-list{
+                                ul{
+                                    padding-left: 0px;
+                                    list-style: none;
+                                    li{
+                                        font-size: 12px;
+                                        margin-bottom: 15px;
+                                        span{
+                                            &.user-status{
+                                                display: inline-block;
+                                                width: 10px;
+                                                height: 10px;
+                                                border-radius: 50%;
+                                                margin-right: 10px;
+                                                padding: 0px;
+                                                @include box-shadow(1px 1px 5px 0px rgba(0,0,0,0.2));
+                                                &.user-available{
+                                                    background-color: #4CAF50;
+                                                }
+                                                &.user-not-available{
+                                                    background-color: #F44336;
+                                                }
+                                                &.user-busy{
+                                                    background-color: #FF9800;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            } 
+        }
+    }
+}
