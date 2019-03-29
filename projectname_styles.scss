@@ -1,0 +1,34 @@
+/* Import all the style files here - Do not write scss code here */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import '../../../../node_modules/bootstrap/dist/css/bootstrap.min';
+
+// Base : Variables, Mixin, Typography, icons
+@import "./base/projectname_variables";
+@import "./base/projectname_mixin";
+@import "./base/projectname_typography";
+@import "./base/projectname_icons";
+
+// Layouts
+@import "./layouts/projectname_main_view";
+@import "./layouts/projectname_landing_view";
+
+// Partials
+@import "./partials/projectname_three_col_container";
+@import "./partials/projectname_right_sidebar";
+@import "./partials/projectname_scheduler";
+@import "./partials/projectname_appointments";
+@import "./partials/projectname_inbox";
+@import "./partials/projectname_left_search";
+
+// Components
+@import "./components/projectname_forms";
+@import "./components/projectname_cards";
+@import "./components/projectname_cards_products";
+@import "./components/projectname_buttons";
+@import "./components/projectname_percentage_circles";
+@import "./components/projectname_table";
+@import "./components/projectname_search_grid";
+
+// Common
+@import "projectname_common";
+@import "projectname_overrides";
