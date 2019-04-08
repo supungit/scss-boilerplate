@@ -2,18 +2,12 @@
 $primary-color : #0069C0;
 $primary-color-level-2 : #0078D7;
 
-$aurora-green: #4caf50;
-$aurora-red: #f44336;
-$aurora-orange: #ff971b;
-$aurora-yellow: #f6cf27;
+$aurora-green: #4CAF50;
+$aurora-red: #F44336;
+$aurora-orange: #FF971B;
+$aurora-yellow: #F6CF27;
 
-$top-navbar-bg : #F2F2F2;
-$top-navbar-font-color : #7a7a7a;
-$top-navbar-yellow-link-color : #FF9800;
-$right-sidebar-bg : #f2f2f2;
-$button-left-border-color : #F44336;
-
-/*products cards colors*/
+/*Products cards colors*/
 $product-blue: #0078D7;
 $product-green: #4CAF50;
 $product-brown: #9D4E00;
@@ -39,14 +33,23 @@ $color-success-dark : #4CAF50;
 $color-warning-dark : #FF9800;
 $color-danger-dark : #F44336;
 
-/* font colors */
+/* Font colors */
 $color-font-white : #FFFFFF;
 $color-font-dark : #000000;
 $color-font-gray : #7A7A7A;
+$color-font-red : #F44336;
 
 /* background colors */
 $color-bg-white : #FFFFFF;
 $color-bg-dark :#000000;
+$color-bg-gray : #D6D6D6;
+$color-bg-lightgray : #E6E6E6;
+$color-bg-lightgray-level-1 : #FCFCFC;
+$color-bg-lightgray-level-2 : #F2F2F2;
 
-
-
+/*Border colors*/ 
+$bordercolor-bg-darkgray : #707070;
+$bordercolor-bg-gray : #D6D6D6;
+$bordercolor-info-light : #CFE5F8;
+$bordercolor-warning : #FFAD1E;
+$bordercolor-danger : #FF3B3B;

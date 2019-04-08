@@ -1,31 +1,4 @@
-$breakpoint: 767px;
-$breakpoint2: 992px;
-
-/* Table column sizing
-================================== */
-.table-cell-w-20 {
-  width: 20%;
-}
-
-.table-cell-w-15 {
-  width: 15%;
-}
-
-.table-cell-w-10 {
-  width: 10%;
-}
-
-.table-cell-w-8 {
-  width: 8%;
-}
-
-.table-cell-w-5 {
-  width: 5%;
-}
-
-
-/* Apply styles
-================================== */
+/* Responsive Table - https://css-tricks.com/accessible-simple-responsive-tables/ */
 .aurora-Rtable {
   display: flex;
   flex-wrap: wrap;
@@ -48,10 +21,10 @@ $breakpoint2: 992px;
       word-break: break-word;
 
       &.column-heading {
-        color: #000000;
+        color: $color-font-dark;
         padding: 5px;
         font-weight: 600;
-        background-color: #ffffff;
+        background-color: $color-bg-white;
       }
 
       .aurora-Rtable-cell--heading {
@@ -60,245 +33,30 @@ $breakpoint2: 992px;
 
       .aurora-Rtable-cell--content {
         .user-image {
-          border: 2px solid #707070;
+          border: 2px solid $bordercolor-bg-darkgray;
         }
 
         .record-status {
           font-weight: 600;
-
-          &.record-status--active {
-            color: #19F119;
-          }
-
-          &.record-status--inactive {
-            color: #FF3B3B;
-          }
         }
 
         .action-cell {
           font-weight: 600;
           cursor: pointer;
-
-          &.action-cell--viewdetail {
-            color: #2BA3FF;
-          }
         }
       }
     }
 
     &:nth-child(odd) {
-      background-color: #F2F2F2;
+      background-color: $color-bg-lightgray-level-2;
     }
 
     &.aurora-Rtable-row-warning {
-      border-left: 5px solid #FFAD1E;
+      border-left: 5px solid $bordercolor-warning;
     }
 
     &.aurora-Rtable-row-danger {
-      border-left: 5px solid #FF3B3B;
-    }
-  }
-}
-
-/* Responsive
-==================================== */
-@media all and (max-width: $breakpoint) {
-
-  .aurora-Rtable--collapse {
-    display: block;
-    width: 100%;
-    padding: 1em;
-    box-shadow: none;
-
-    .aurora-Rtable-row {
-      box-sizing: border-box;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 2em;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-
-      .aurora-Rtable-cell {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid #f2f2f2;
-        padding: 10px;
-
-        .aurora-Rtable-cell--heading {
-          display: inline-block;
-          flex: 1;
-          max-width: 120px;
-          min-width: 120px;
-          color: #000000;
-          font-weight: 700;
-          margin-right: 1em;
-        }
-
-        .aurora-Rtable-cell--content {
-          padding-left: 1em;
-        }
-      }
-
-      &:nth-child(odd) {
-        background-color: #f4f4f4;
-
-        .aurora-Rtable-cell {
-          border-bottom: 1px solid #ffffff;
-        }
-      }
-    }
-
-    .aurora-Rtable-row--head {
-      display: none;
-    }
-  }
-}
-
-.help-icon {
-  width: 15px;
-  height: 15px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15'%3E%3Ctext id='info' transform='translate(0 15)' fill='%23707070' font-size='15' font-family='MaterialIcons-Regular, Material Icons'%3E%3Ctspan x='0' y='0'%3Einfo%3C/tspan%3E%3C/text%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  display: inline-flex;
-  cursor: pointer;
-}
-
-/* aurora product table */
-
-.aurora-product-table {
-  margin: 30px 3px;
-  padding: 0;
-  font-size: 12px;
-
-  .aurora-Rtable-row {
-    width: 100%;
-    @include flexbox();
-    @include border-radius(5px);
-    margin-bottom: 2px;
-    align-items: center;
-
-    .aurora-Rtable-cell {
-      flex-grow: 1;
-      padding: 10px 0.5%;
-      overflow: hidden; // Or flex might break
-      list-style: none;
-      word-break: break-word;
-      border-right: 1px solid #FCFCFC;
-      border-left: 1px solid #FCFCFC;
-      height: 100%;
-
-      &.column-heading {
-        color: $color-font-dark;
-        padding: 10px 0.5%;
-        font-weight: 600;
-        background-color: #FCFCFC;
-        
-      }
-
-      .aurora-Rtable-cell--heading {
-        display: none;
-      }
-
-      .aurora-Rtable-cell--content {
-
-        i {
-          color: $aurora-green;
-          line-height: 20px;
-        }
-      }
-    }
-
-    &:nth-child(odd) {
-      background-color: #F2F2F2;
-    }
-
-    &:hover,
-    &.table-selected {
-      background-color: $primary-color-level-2;
-      color: $color-font-white;
-
-      .aurora-Rtable-cell--content {
-
-        i {
-          color: $color-font-white;
-        }
-      }
-    }
-  }
-}
-
-/* Responsive
-==================================== */
-@media all and (max-width: $breakpoint2) {
-
-  .aurora-product-table--collapse {
-    width: 100%;
-    padding: 1em;
-
-    .aurora-Rtable-row {
-      box-sizing: border-box;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 2em;
-      @include box-shadow(0 0 5px rgba(0, 0, 0, 0.1));
-
-      .aurora-Rtable-cell {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid #F2F2F2;
-        padding: 10px;
-        height: auto;
-
-        .aurora-Rtable-cell--heading {
-          display: inline-block;
-          flex: 1;
-          max-width: 120px;
-          min-width: 120px;
-          color: $color-font-dark;
-          font-weight: 700;
-          margin-right: 1em;
-        }
-
-        .aurora-Rtable-cell--content {
-          padding-left: 1em;
-        }
-      }
-
-      &:nth-child(odd) {
-        background-color: #F4F4F4;
-
-        .aurora-Rtable-cell {
-          border-bottom: 1px solid $color-bg-white;
-        }
-      }
-
-      &:hover,
-      &.table-selected {
-        background-color: $primary-color-level-2;
-        color: $color-font-white;
-
-        .aurora-Rtable-cell {
-
-          .aurora-Rtable-cell--heading {
-
-            color: $color-font-white;
-          }
-        }
-
-        .aurora-Rtable-cell--content {
-
-          i {
-            color: $color-font-white;
-          }
-        }
-      }
-    }
-
-    .aurora-Rtable-row--head {
-      display: none;
+      border-left: 5px solid $bordercolor-danger;
     }
   }
 }

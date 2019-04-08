@@ -1,8 +1,4 @@
 .product-list-wrapper {
-    background-color: #FCFCFC;
+    background-color: $color-bg-lightgray-level-1;
     height: 100%;
-
-    @media all and (max-width: 992px) {
-        height: auto;
-    }
 }
